@@ -4,6 +4,7 @@ import "./App.scss";
 import TopBar from "./components/TopBar";
 import Home from "./components/Home";
 import ReservationForm from "./components/ReservationForm";
+import ReservationList from "./components/ReservationList";
 // import Counter from "./components/Counter";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
       {/* esempio di utilizzo di state */}
       {/* <Counter /> */}
+      <ReservationList />
       <ReservationForm />
       <Home />
     </div>

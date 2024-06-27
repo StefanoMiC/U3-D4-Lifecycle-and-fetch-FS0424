@@ -11,13 +11,19 @@ class Home extends Component {
     selectedPasta: menu[0]
   };
 
+  componentDidMount() {
+    // console.log("HOME didMount()");
+  }
+
   render() {
     // mai chiamare setState fuori dal contesto di un evento
     // risulterebbe in un loop infinito di setState che chiama render e render che chiama setState
+
+    // console.log("HOME Render");
     return (
       <Container fluid="md" className="mt-5">
         <Row className="justify-content-center">
-          <Col xs={10} md={8} xl={4}>
+          <Col xs={10} md={8} lg={4} xl={6}>
             {/* short circuit operator - blocca la renderizzazione del codice alla destra del && se il valore a sinistra è falsy */}
             {this.state.selectedPasta && <Alert variant="info">Pasta selezionata</Alert>}
             {/* onSlid è un metodo regalatoci dal carosello di react-bootstrap, 
@@ -30,7 +36,7 @@ class Home extends Component {
             <Carousel
               interval={3000}
               onSlid={slideIndex => {
-                console.log(slideIndex, menu[slideIndex]);
+                // console.log(slideIndex, menu[slideIndex]);
                 this.setState({ selectedPasta: menu[slideIndex] });
               }}
             >

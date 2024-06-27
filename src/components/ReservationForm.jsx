@@ -137,12 +137,17 @@ class ReservationForm extends Component {
     }
   };
 
+  componentDidMount() {
+    // console.log("RESERV. FORM didMount()");
+  }
+
   render() {
+    // console.log("RESERV. FORM Render");
     return (
       <Container>
         <h2 className="display-5 text-center mt-5">Prenota un tavolo da noi</h2>
         <Row className="justify-content-center">
-          <Col xs={12} md={8} lg={4}>
+          <Col xs={12} md={8} lg={4} xl={6}>
             {/* versione 1) con cortocircuito */}
             {this.state.hasAlert && (
               <Alert variant="success" onClose={() => this.setState({ hasAlert: false })} dismissible>
